@@ -23,8 +23,11 @@ public class Voto {
 	 * 
 	 */
 	public void si(){
-		gc.actualizaGráficoCircular();
-		gb.actualizaGráficoBarras();
+		if(getVotosNo()+getVotosSi()>3){
+			gc.actualizaGráficoCircular();
+			gb.actualizaGráficoBarras();
+		}
+		
 		lv.actualizaLv(getVotosSi(), getVotosNo());
 		}
 	/**
