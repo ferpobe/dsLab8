@@ -12,7 +12,10 @@ public class Voto {
 	 * 
 	 * @param voto
 	 */
-	public Voto(String voto){
+	public Voto(){
+		gc=new GraficoCircular();
+		gb=new GraficodeBarras();
+		lv=new LineadeValores();
 		votosSi=0;
 		votosNo=0;
 		}
@@ -51,14 +54,14 @@ public class Voto {
 	 * 
 	 * @param no
 	 */
-	public void setVotosNo(int no) {
-		votosNo=no;
+	public void setVotosNo() {
+		votosNo++;
 		}
 	/**
 	 * 
 	 * @param si
 	 */
-	public void setVotosSi(int si) {
-		votosSi=si;
+	public void setVotosSi() {
+		votosSi++;
 		}
 	}

@@ -7,30 +7,31 @@ public class Encuesta {
 
 	public Encuesta(String pregunta) {
 		this.pregunta = pregunta;
+		voto=new Voto();
 	}
 
 	public String getPregunta() {
 		return pregunta;
 	}
 	public int getVotosSi() {
-		voto.setVotosSi(si);
+		voto.setVotosSi();
 		return si;
 	}
 
 	public int getVotosNo() {
-		voto.setVotosNo(no);
+		voto.setVotosNo();
 		return no;
 	}
 
 	public void incrementaSi() {
 		getVotosSi();
-		getVotosNo();
+		
 		voto.si();
 		guardaResultados();
 	}
 
 	public void incrementaNo() {
-		getVotosSi();
+		
 		getVotosNo();
 		voto.no();
 		guardaResultados();
